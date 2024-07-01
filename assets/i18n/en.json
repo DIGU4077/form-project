@@ -1,0 +1,17 @@
+{
+    "studentForm": {
+      "title": "STUDENT FORM",
+      "name": "Name",
+      "email": "Email",
+      "phoneNumber": "Phone Number",
+      "class": "Class",
+      "submit": "Submit"
+    },
+    "tableHeaders": {
+      "name": "Name",
+      "email": "Email",
+      "phoneNumber": "Phone Number",
+      "class": "Class"
+    }
+  }
+  
