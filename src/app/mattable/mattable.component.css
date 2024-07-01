@@ -1,0 +1,71 @@
+/* Container styling */
+.container {
+    margin: 20px;
+    max-width: 1800px;
+  }
+  
+  /* Button styling */
+  .container button.mat-button {
+    border-radius: 40px,solid,blue; /* Rounded corners */
+    color: white; /* Text color */
+    margin-right: 40px; /* Space between buttons */
+    
+  }
+  
+ 
+  
+  /* Table and row styling */
+  .mat-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mat-header-row, .mat-row {
+    background-color: #f0f0f0;
+  }
+  
+  .mat-header-cell, .mat-cell {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Input field styling */
+  .mat-cell input {
+    border: none;
+    padding: 8px;
+    width: calc(100% - 16px); /* Adjust width to fit within cell */
+    box-sizing: border-box;
+    font-size: inherit; /* Use the same font size as other text */
+    background-color: transparent; /* Match background color */
+  }
+  
+  /* Checkbox styling */
+  .mat-checkbox {
+    padding: 8px;
+  }
+  
+  /* Submit button styling */
+  .mat-button.warn {
+    margin-top: 10px;
+    border: solid,20px;
+ 
+  }
+  .mdc-button
+  {
+    background-color: navy;
+    border-radius: 40px;
+    margin-right: 20px;
+  }
+  .mat-elevation-z8 {
+    margin-top: 16px;
+  }
+  
+  .mat-paginator {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+  }
+  

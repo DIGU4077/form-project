@@ -1,0 +1,25 @@
+.btn
+{
+ margin-left: 500px;
+
+}
+.submit
+{
+    margin-left: 1500px;
+}
+.input-cell {
+    border: none; /* Remove border */
+    background-color: transparent; /* Transparent background */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    width: 100%; /* Ensure it fills the entire cell */
+  }
+  .success-alert {
+    color: #155724; /* Green color */
+    background-color: #d4edda; /* Light green background */
+    border-color: #c3e6cb; /* Border color */
+    padding: 1rem; /* Padding around the alert */
+    border-radius: 0.25rem; /* Rounded corners */
+    margin-bottom: 1rem; /* Margin bottom for spacing */
+  }
+  

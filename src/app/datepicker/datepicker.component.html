@@ -1,0 +1,59 @@
+
+    
+    <!-- <mat-form-field style="display: none;">
+        <input matInput [matDatepicker]="picker" style="display: none; ">
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker>
+          <mat-datepicker-actions>
+            <button mat-button matDatepickerCancel>Cancel</button>
+            <button mat-raised-button matDatepickerApply >
+              Apply
+            </button>
+          </mat-datepicker-actions>
+        </mat-datepicker>
+        
+    </mat-form-field>
+    <button mat-raised-button (click)="picker.open()" style="background-color: rgb(17, 17, 91); color: white;">
+        Open date
+      </button> -->
+
+ 
+ 
+   <div class="card">
+    <div class="row">
+        <div class="col-3">
+            <input type="text" class="form-control" placeholder="First name"  [(ngModel)]="user.firstname">
+          </div>
+          <div class="col-3">
+            <input type="text" class="form-control" placeholder="Last name" [(ngModel)]="user.lastname">
+          </div>
+          <div class="col-3">
+            <input type="text" class="form-control" placeholder="Gmail" [(ngModel)]="user.email">
+          </div>
+          <div class="col-3">
+            <input type="checkbox" [(ngModel)]="user.ispresent"> Present
+          </div>
+      </div>
+           <div class="row">
+            <div class="col-4">
+          
+              <input matInput [matDatepicker]="picker" style="visibility: hidden; " (dateChange)="onDateChange($event)">
+              <mat-datepicker-toggle matIconSuffix [for]="picker" style="visibility: hidden;"></mat-datepicker-toggle>
+              <mat-datepicker #picker>
+                <mat-datepicker-actions>
+                  <button mat-raised-button matDatepickerApply (click)="onSubmit()"
+                  style="border-radius: 40px; background-color: rgb(17, 17, 70); color: white;">
+                  Submit
+                   </button>
+                </mat-datepicker-actions>
+              </mat-datepicker>
+              
+          <button mat-raised-button (click)="picker.open()" style="background-color: rgb(17, 17, 91); color: white; border-radius: 40px;">
+              Open date
+            </button>
+         </div>
+           </div>
+        
+    </div> 
+
+  

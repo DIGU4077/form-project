@@ -1,0 +1,60 @@
+<div class="container-fluid">
+  <div class="card mt-5">
+    <div class="card-body">
+      <h5>{{ 'studentForm.title' | translate }}</h5>
+      <form [formGroup]="userForm">
+        <div class="row">
+          <div class="col-6">
+            <label for="name">{{ 'studentForm.name' | translate }}</label>
+            <input type="text" class="form-control" placeholder="{{ 'studentForm.name' | translate }}" formControlName="name" required>
+          </div>
+          <div class="col-6">
+            <label for="email">{{ 'studentForm.email' | translate }}</label>
+            <input type="text" class="form-control" placeholder="{{ 'studentForm.email' | translate }}" formControlName="email" required>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-6 mt-3">
+            <label for="phonenumber">{{ 'studentForm.phoneNumber' | translate }}</label>
+            <input type="text" class="form-control" placeholder="{{ 'studentForm.phoneNumber' | translate }}" formControlName="phonenumber" required>
+          </div>
+          <div class="col-6 mt-3">
+            <label for="class">{{ 'studentForm.class' | translate }}</label>
+            <input type="text" class="form-control" placeholder="{{ 'studentForm.class' | translate }}" formControlName="class" required>
+          </div>
+        </div>
+        
+        <div class="row mt-3">
+          <div class="col-3">
+            <button type="button" class="btn btn-danger">submit</button>
+          </div>
+          <div class="col-3">
+            <select class="form-control" [(ngModel)]="currentLanguage" (change)="switchLanguage($any($event.target).value)">
+              <option value="en">English</option>
+              <option value="mr">मराठी</option>
+            </select>
+          </div>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+<div *ngIf="users.length > 0" class="mt-5">
+  <table>
+    <tr>
+      <th>{{ 'tableHeaders.name' | translate }}</th>
+      <th>{{ 'tableHeaders.email' | translate }}</th>
+      <th>{{ 'tableHeaders.phoneNumber' | translate }}</th>
+      <th>{{ 'tableHeaders.class' | translate }}</th>
+    </tr>
+    <tr *ngFor="let user of users">
+      <td>{{ user.name }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.phonenumber }}</td>
+      <td>{{ user.class }}</td>
+    </tr>
+  </table>
+</div>

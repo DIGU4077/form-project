@@ -1,0 +1,47 @@
+<form >
+    <div class="card mt-5">
+        <div class="card-body">
+           <h2 style="text-align: center;">User Form</h2> 
+        <div class="row mt-5" style="margin-left: 40px; margin-right: 40px;">
+            <div class="col-4">
+                <input type="text" class="form-control" placeholder="Name" [(ngModel)]="data.name" name="name" required>
+            </div>
+            <div class="col-4">
+                <input type="email" class="form-control" placeholder="Email" [(ngModel)]="data.email" name="email" required>
+            </div>
+            <div class="col-4">
+                <input type="text" class="form-control" placeholder="Phone Number" [(ngModel)]="data.phonenumber" name="phoneNumber" required>
+            </div>
+        </div>
+        <div class="row">
+            <button type="submit" class="btn btn-danger mt-3 col-1" style="margin-left: 1650px;" (click)="submitData(data)" >Submit Data</button>
+          </div>
+        
+        </div>
+    </div>
+</form>
+<div>
+    <div class="card mt-5">
+        <h2>Delete Form</h2>
+    <div class="col-4">
+        <input type="text" class="form-control" placeholder="enter id" [(ngModel)]="id" name="name" required>
+    </div>
+    <div class="row">
+        <button type="submit" class="btn btn-danger mt-3 col-1" style="margin-left: 1650px;" (click)="deletepost(id)" >Delete Data</button>
+      </div>
+  </div>
+</div>
+<div class="card mt-5">
+    <h2>Update Form</h2>
+<div class="row">
+    <div class="col-4">
+        <input type="text" class="form-control" placeholder="enter id" [(ngModel)]="updateid" name="name" required>
+    </div>
+    <div class="col-4">
+        <input type="text" class="form-control" placeholder="enter title" [(ngModel)]="updateTitle" name="name" required>
+    </div>
+</div>
+<div class="row">
+    <button type="submit" class="btn btn-danger mt-3 col-1" style="margin-left: 1650px;" (click)="updatepost()" >update Data</button>
+  </div>
+</div>

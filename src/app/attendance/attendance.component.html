@@ -1,0 +1,29 @@
+<div class="container">
+  <button class="btn btn-outline-success" type="button" (click)="toggleTable('take')">Take Attendance</button>
+  <button class="btn btn-outline-secondary" type="button" (click)="toggleTable('show')">Show Attendance</button>
+
+  <div *ngIf="showTable">
+    <table class="table table-striped mt-3">
+      <thead>
+        <tr>
+          <th scope="col">Student ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of students">
+          <td>{{ student.id }}</td>
+          <td>
+            <input *ngIf="action === 'take'" type="text" [(ngModel)]="student.name" />
+            <span *ngIf="action === 'show'">{{ student.name }}</span>
+          </td>
+          <td>
+            <input type="checkbox" [(ngModel)]="student.status" [disabled]="action === 'show'" />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <button *ngIf="action === 'take'" (click)="submit()" type="button" class="btn btn-danger mt-3">Submit Attendance</button>
+  </div>
+</div>

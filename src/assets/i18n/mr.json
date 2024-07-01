@@ -1,0 +1,17 @@
+{
+    "studentForm": {
+      "title": "विद्यार्थी फॉर्म",
+      "name": "नाव",
+      "email": "ईमेल",
+      "phoneNumber": "फोन नंबर",
+      "class": "वर्ग",
+      "submit": "सबमिट"
+    },
+    "tableHeaders": {
+      "name": "नाव",
+      "email": "ईमेल",
+      "phoneNumber": "फोन नंबर",
+      "class": "वर्ग"
+    }
+  }
+  
